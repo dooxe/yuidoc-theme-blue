@@ -1,10 +1,10 @@
 {
-  "name": "yuidoc-theme-blue",
+  "name": "yuidoc-theme-blue-dc",
   "version": "0.1.9",
-  "description": "A custom theme for yuidocs inspired by the blue color :)",
+  "description": "A custom theme for yuidocs inspired by the blue color :) and the dark one :)",
   "repository": {
     "type": "git",
-    "url": "git://github.com/royriojas/yuidoc-theme-blue.git"
+    "url": "git://github.com/royriojas/yuidoc-theme-blue-dc.git"
   },
   "keywords": [
     "yuidoc-theme",
@@ -13,7 +13,14 @@
     "themes",
     "yuidoc themes"
   ],
-  "author": "Roy Riojas",
+  "author": "Roy Riojas",,
+  "contributors":[
+	{
+		"name" : "dooxe",
+		"email"	: "maxime.daisy@gmail.com",
+		"url":"http://dooxe-creative.net"
+	}
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/royriojas/yuidoc-theme-blue/issues"

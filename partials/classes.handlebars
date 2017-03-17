@@ -1,7 +1,7 @@
 <h1>{{name}}</h1>
 <div class="meta">
     {{#if uses}}
-        <div class="uses">
+        <div class="meta-content uses">
             Uses
             <ul class="inline commas">
                 {{#uses}}
@@ -12,13 +12,15 @@
     {{/if}}
 
     {{#if extends}}
-        <div class="extends">
+        <div class="meta-content extends">
             Extends {{#crossLink extends}}{{/crossLink}}
         </div>
     {{/if}}
 
+    <!--dc-->
+    <div style="display:none">
     {{#if foundAt}}
-        <div class="foundat">
+        <div class="meta-content foundat">
             Defined in: <a href="{{foundAt}}">`{{{file}}}:{{{line}}}`</a>
         </div>
     {{/if}}
@@ -31,6 +33,8 @@
             Module: {{#crossLinkModule module}}{{/crossLinkModule}}
         {{/if}}
     {{/if}}
+    </div>
+    <!--/dc-->
 
     {{#if since}}
         <p>Available since {{since}}</p>
@@ -52,10 +56,16 @@
     </div>
 {{/if}}
 
+
+<!--dc-->
+<div style="display:none">
 <h3>Summary</h3>
 <div class="intro">
     {{{classDescription}}}
 </div>
+</div>
+<!--/dc-->
+{{{classDescription}}}
 
 {{#is_constructor}}
     <div class="constructor">
@@ -110,7 +120,6 @@
             {{#if properties}}
                 <div class="index-section properties">
                     <h3>Properties</h3>
-
                     <ul class="index-list properties{{#if extends}} extends{{/if}}">
                         {{#properties}}
                             <li class="index-item property{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}{{#if overwritten_from}} inherited{{/if}}{{#if extended_from}} inherited{{/if}}">
@@ -207,4 +216,3 @@
 </div>
 
 {{> exampleurl }}
-
